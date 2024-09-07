@@ -1,0 +1,886 @@
+{
+    "Positioning and Layout": {
+        "position": {
+            "description": "Specifies the type of positioning method used for an element.",
+            "values": {
+                "static": {
+                    "description": "Default value. Elements are positioned according to the normal flow of the document.",
+                    "example": "div { position: static; }"
+                },
+                "relative": {
+                    "description": "The element is positioned relative to its normal position.",
+                    "example": "div { position: relative; }"
+                },
+                "absolute": {
+                    "description": "The element is positioned relative to its nearest positioned ancestor.",
+                    "example": "div { position: absolute; }"
+                },
+                "fixed": {
+                    "description": "The element is positioned relative to the browser window.",
+                    "example": "div { position: fixed; }"
+                },
+                "sticky": {
+                    "description": "The element is positioned based on the user's scroll position.",
+                    "example": "div { position: sticky; }"
+                }
+            }
+        },
+        "top": {
+            "description": "Specifies the distance between the top edge of an element and its containing block.",
+            "values": {
+                "10px": {
+                    "description": "Sets the top position to 10 pixels.",
+                    "example": "div { top: 10px; }"
+                },
+                "20%": {
+                    "description": "Sets the top position to 20% of the containing block.",
+                    "example": "div { top: 20%; }"
+                }
+            }
+        },
+        "right": {
+            "description": "Specifies the distance between the right edge of an element and its containing block.",
+            "values": {
+                "10px": {
+                    "description": "Sets the right position to 10 pixels.",
+                    "example": "div { right: 10px; }"
+                },
+                "20%": {
+                    "description": "Sets the right position to 20% of the containing block.",
+                    "example": "div { right: 20%; }"
+                }
+            }
+        },
+        "bottom": {
+            "description": "Specifies the distance between the bottom edge of an element and its containing block.",
+            "values": {
+                "10px": {
+                    "description": "Sets the bottom position to 10 pixels.",
+                    "example": "div { bottom: 10px; }"
+                },
+                "20%": {
+                    "description": "Sets the bottom position to 20% of the containing block.",
+                    "example": "div { bottom: 20%; }"
+                }
+            }
+        },
+        "left": {
+            "description": "Specifies the distance between the left edge of an element and its containing block.",
+            "values": {
+                "10px": {
+                    "description": "Sets the left position to 10 pixels.",
+                    "example": "div { left: 10px; }"
+                },
+                "20%": {
+                    "description": "Sets the left position to 20% of the containing block.",
+                    "example": "div { left: 20%; }"
+                }
+            }
+        },
+        "z-index": {
+            "description": "Specifies the stack order of elements.",
+            "values": {
+                "1": {
+                    "description": "Sets the stack order to 1.",
+                    "example": "div { z-index: 1; }"
+                },
+                "auto": {
+                    "description": "Default value. The stack order is determined by the browser.",
+                    "example": "div { z-index: auto; }"
+                }
+            }
+        },
+        "float": {
+            "description": "Specifies how an element should float.",
+            "values": {
+                "left": {
+                    "description": "Floats the element to the left.",
+                    "example": "div { float: left; }"
+                },
+                "right": {
+                    "description": "Floats the element to the right.",
+                    "example": "div { float: right; }"
+                },
+                "none": {
+                    "description": "Default value. The element does not float.",
+                    "example": "div { float: none; }"
+                }
+            }
+        },
+        "clear": {
+            "description": "Specifies which sides of an element where floating elements are not allowed.",
+            "values": {
+                "left": {
+                    "description": "The element is moved below floating elements on the left.",
+                    "example": "div { clear: left; }"
+                },
+                "right": {
+                    "description": "The element is moved below floating elements on the right.",
+                    "example": "div { clear: right; }"
+                },
+                "both": {
+                    "description": "The element is moved below floating elements on both sides.",
+                    "example": "div { clear: both; }"
+                },
+                "none": {
+                    "description": "Default value. The element is not moved below floating elements.",
+                    "example": "div { clear: none; }"
+                }
+            }
+        },
+        "overflow": {
+            "description": "Specifies what should happen if content overflows an element's box.",
+            "values": {
+                "visible": {
+                    "description": "The content overflows the element's box and is visible.",
+                    "example": "div { overflow: visible; }"
+                },
+                "hidden": {
+                    "description": "The content overflows the element's box and is hidden.",
+                    "example": "div { overflow: hidden; }"
+                },
+                "scroll": {
+                    "description": "Scrollbars are added if content overflows the element's box.",
+                    "example": "div { overflow: scroll; }"
+                },
+                "auto": {
+                    "description": "Scrollbars are added if necessary.",
+                    "example": "div { overflow: auto; }"
+                }
+            }
+        },
+        "visibility": {
+            "description": "Specifies whether an element is visible or not.",
+            "values": {
+                "visible": {
+                    "description": "The element is visible.",
+                    "example": "div { visibility: visible; }"
+                },
+                "hidden": {
+                    "description": "The element is not visible, but still takes up space.",
+                    "example": "div { visibility: hidden; }"
+                },
+                "collapse": {
+                    "description": "For table elements. The element is not visible and does not take up space.",
+                    "example": "table { visibility: collapse; }"
+                }
+            }
+        }
+    },
+    "Flexbox and Grid": {
+        "flex": {
+            "description": "A shorthand property for flex-grow, flex-shrink, and flex-basis.",
+            "values": {
+                "1": {
+                    "description": "The flex item grows and shrinks equally, with a base size of 0.",
+                    "example": "div { flex: 1; }"
+                },
+                "0 1 auto": {
+                    "description": "The flex item will not grow, can shrink, with a base size of auto.",
+                    "example": "div { flex: 0 1 auto; }"
+                },
+                "2 1 100px": {
+                    "description": "The flex item grows twice as much, can shrink, with a base size of 100 pixels.",
+                    "example": "div { flex: 2 1 100px; }"
+                }
+            }
+        },
+        "flex-basis": {
+            "description": "Specifies the initial size of a flex item.",
+            "values": {
+                "auto": {
+                    "description": "The initial size of the item is based on its content.",
+                    "example": "div { flex-basis: auto; }"
+                },
+                "100px": {
+                    "description": "The initial size of the item is 100 pixels.",
+                    "example": "div { flex-basis: 100px; }"
+                },
+                "50%": {
+                    "description": "The initial size of the item is 50% of the container's size.",
+                    "example": "div { flex-basis: 50%; }"
+                }
+            }
+        },
+        "flex-direction": {
+            "description": "Specifies the direction of the flex container's main axis.",
+            "values": {
+                "row": {
+                    "description": "The main axis is horizontal, items are laid out from left to right.",
+                    "example": "div { flex-direction: row; }"
+                },
+                "column": {
+                    "description": "The main axis is vertical, items are laid out from top to bottom.",
+                    "example": "div { flex-direction: column; }"
+                },
+                "row-reverse": {
+                    "description": "The main axis is horizontal, items are laid out from right to left.",
+                    "example": "div { flex-direction: row-reverse; }"
+                },
+                "column-reverse": {
+                    "description": "The main axis is vertical, items are laid out from bottom to top.",
+                    "example": "div { flex-direction: column-reverse; }"
+                }
+            }
+        },
+        "flex-flow": {
+            "description": "A shorthand property for flex-direction and flex-wrap.",
+            "values": {
+                "row wrap": {
+                    "description": "Items are laid out in rows and can wrap onto multiple lines.",
+                    "example": "div { flex-flow: row wrap; }"
+                },
+                "column nowrap": {
+
+
+                    "description": "Items are laid out in columns and cannot wrap.",
+                    "example": "div { flex-flow: column nowrap; }"
+                }
+            }
+        },
+        "flex-grow": {
+            "description": "Specifies how much a flex item will grow relative to the other items.",
+            "values": {
+                "1": {
+                    "description": "The item will grow to fill the available space.",
+                    "example": "div { flex-grow: 1; }"
+                },
+                "0": {
+                    "description": "The item will not grow.",
+                    "example": "div { flex-grow: 0; }"
+                }
+            }
+        },
+        "flex-shrink": {
+            "description": "Specifies how much a flex item will shrink relative to the other items.",
+            "values": {
+                "1": {
+                    "description": "The item will shrink to fit the container if necessary.",
+                    "example": "div { flex-shrink: 1; }"
+                },
+                "0": {
+                    "description": "The item will not shrink.",
+                    "example": "div { flex-shrink: 0; }"
+                }
+            }
+        },
+        "flex-wrap": {
+            "description": "Specifies whether flex items should wrap onto multiple lines.",
+            "values": {
+                "wrap": {
+                    "description": "Items will wrap onto multiple lines.",
+                    "example": "div { flex-wrap: wrap; }"
+                },
+                "nowrap": {
+                    "description": "Items will not wrap and will be displayed on a single line.",
+                    "example": "div { flex-wrap: nowrap; }"
+                },
+                "wrap-reverse": {
+                    "description": "Items will wrap onto multiple lines in reverse order.",
+                    "example": "div { flex-wrap: wrap-reverse; }"
+                }
+            }
+        },
+        "justify-content": {
+            "description": "Defines how flex items are distributed along the main axis.",
+            "values": {
+                "flex-start": {
+                    "description": "Items are packed toward the start of the container.",
+                    "example": "div { justify-content: flex-start; }"
+                },
+                "center": {
+                    "description": "Items are centered along the main axis.",
+                    "example": "div { justify-content: center; }"
+                },
+                "space-between": {
+                    "description": "Items are distributed with space between them.",
+                    "example": "div { justify-content: space-between; }"
+                },
+                "space-around": {
+                    "description": "Items are distributed with space around them.",
+                    "example": "div { justify-content: space-around; }"
+                },
+                "space-evenly": {
+                    "description": "Items are distributed with equal space between them.",
+                    "example": "div { justify-content: space-evenly; }"
+                }
+            }
+        },
+        "align-items": {
+            "description": "Defines how flex items are aligned along the cross axis.",
+            "values": {
+                "flex-start": {
+                    "description": "Items are aligned to the start of the cross axis.",
+                    "example": "div { align-items: flex-start; }"
+                },
+                "center": {
+                    "description": "Items are centered along the cross axis.",
+                    "example": "div { align-items: center; }"
+                },
+                "flex-end": {
+                    "description": "Items are aligned to the end of the cross axis.",
+                    "example": "div { align-items: flex-end; }"
+                },
+                "stretch": {
+                    "description": "Items are stretched to fill the container.",
+                    "example": "div { align-items: stretch; }"
+                },
+                "baseline": {
+                    "description": "Items are aligned to the baseline of the container.",
+                    "example": "div { align-items: baseline; }"
+                }
+            }
+        },
+        "align-self": {
+            "description": "Allows the default alignment to be overridden for individual flex items.",
+            "values": {
+                "auto": {
+                    "description": "The element uses the alignment specified by the parent container.",
+                    "example": "div { align-self: auto; }"
+                },
+                "flex-start": {
+                    "description": "The item is aligned to the start of the cross axis.",
+                    "example": "div { align-self: flex-start; }"
+                },
+                "center": {
+                    "description": "The item is centered along the cross axis.",
+                    "example": "div { align-self: center; }"
+                },
+                "flex-end": {
+                    "description": "The item is aligned to the end of the cross axis.",
+                    "example": "div { align-self: flex-end; }"
+                },
+                "stretch": {
+                    "description": "The item is stretched to fill the container.",
+                    "example": "div { align-self: stretch; }"
+                },
+                "baseline": {
+                    "description": "The item is aligned to the baseline of the container.",
+                    "example": "div { align-self: baseline; }"
+                }
+            }
+        },
+        "align-content": {
+            "description": "Aligns flex lines within the flex container.",
+            "values": {
+                "flex-start": {
+                    "description": "Lines are packed toward the start of the cross axis.",
+                    "example": "div { align-content: flex-start; }"
+                },
+                "center": {
+                    "description": "Lines are centered along the cross axis.",
+                    "example": "div { align-content: center; }"
+                },
+                "flex-end": {
+                    "description": "Lines are packed toward the end of the cross axis.",
+                    "example": "div { align-content: flex-end; }"
+                },
+                "space-between": {
+                    "description": "Lines are distributed with space between them.",
+                    "example": "div { align-content: space-between; }"
+                },
+                "space-around": {
+                    "description": "Lines are distributed with space around them.",
+                    "example": "div { align-content: space-around; }"
+                },
+                "stretch": {
+                    "description": "Lines are stretched to fill the container.",
+                    "example": "div { align-content: stretch; }"
+                }
+            }
+        },
+        "grid": {
+            "description": "Shorthand for grid-template-rows, grid-template-columns, and grid-template-areas.",
+            "values": {
+                "none": {
+                    "description": "No grid layout is applied.",
+                    "example": "div { grid: none; }"
+                },
+                "100px / auto": {
+                    "description": "Defines grid rows as 100 pixels and columns as auto.",
+                    "example": "div { grid: 100px / auto; }"
+                }
+            }
+        },
+        "grid-template": {
+            "description": "Defines the columns, rows, and areas of a grid container.",
+            "values": {
+                "none": {
+                    "description": "No grid template is defined.",
+                    "example": "div { grid-template: none; }"
+                },
+                "100px 1fr / 200px 2fr": {
+                    "description": "Defines 100px and 1fr for rows and 200px and 2fr for columns.",
+                    "example": "div { grid-template: 100px 1fr / 200px 2fr; }"
+                }
+            }
+        },
+        "grid-area": {
+            "description": "Specifies a grid item's size and location in a grid layout.",
+            "values": {
+                "auto": {
+                    "description": "The item automatically occupies a grid cell.",
+                    "example": "div { grid-area: auto; }"
+                },
+                "1 / 2 / 3 / 4": {
+                    "description": "The item spans from row 1 to row 3 and column 2 to column 4.",
+                    "example": "div { grid-area: 1 / 2 / 3 / 4; }"
+                }
+            }
+        },
+        "grid-template-columns": {
+            "description": "Defines the column sizes of a grid container.",
+            "values": {
+                "100px": {
+                    "description": "Sets the column size to 100 pixels.",
+                    "example": "div { grid-template-columns: 100px; }"
+                },
+                "1fr 2fr": {
+                    "description": "Sets columns to 1 fraction and 2 fractions of available space.",
+                    "example": "div { grid-template-columns: 1fr 2fr; }"
+                }
+            }
+        },
+        "grid-template-rows": {
+            "description": "Defines the row sizes of a grid container.",
+            "values": {
+                "100px": {
+                    "description": "Sets the row size to 100 pixels.",
+                    "example": "div { grid-template-rows: 100px; }"
+                },
+                "1fr 2fr": {
+                    "description": "Sets rows to 1 fraction and 2 fractions of available space.",
+                    "example": "div { grid-template-rows: 1fr 2fr; }"
+                }
+            }
+        },
+        "grid-column": {
+            "description": "Specifies how many columns an item will span and where it will start.",
+            "values": {
+                "auto": {
+                    "description": "The item automatically occupies a grid column.",
+                    "example": "div { grid-column: auto; }"
+                },
+                "1 / 3": {
+                    "description": "The item spans from column line 1 to column line 3.",
+                    "example": "div { grid-column: 1 / 3; }"
+                }
+            }
+        },
+        "grid-row": {
+            "description": "Specifies how many rows an item will span and where it will start.",
+            "values": {
+                "auto": {
+                    "description": "The item automatically occupies a grid row.",
+                    "example": "div { grid-row: auto; }"
+                },
+                "1 / 2": {
+                    "description": "The item spans from row line 1 to row line 2.",
+                    "example": "div { grid-row: 1 / 2; }"
+                }
+            }
+        }
+    },
+    "Typography": {
+        "font-family": {
+            "description": "Specifies the typeface for text.",
+            "values": {
+                "Arial": {
+                    "description": "Uses the Arial typeface.",
+                    "example": "p { font-family: Arial; }"
+                },
+                "'Times New Roman', serif": {
+                    "description": "Uses Times New Roman with a fallback to serif.",
+                    "example": "p { font-family: 'Times New Roman', serif; }"
+                }
+            }
+        },
+        "font-size": {
+            "description": "Specifies the size of the font.",
+            "values": {
+                "16px": {
+                    "description": "Sets the font size to 16 pixels.",
+                    "example": "p { font-size: 16px; }"
+                },
+                "1.5em": {
+                    "description": "Sets the font size to 1.5 times the size of the parent element's font.",
+                    "example": "p { font-size: 1.5em; }"
+                }
+            }
+        },
+        "font-weight": {
+            "description": "Specifies the weight (thickness) of the font.",
+            "values": {
+                "normal": {
+                    "description": "Sets the font weight to normal.",
+                    "example": "p { font-weight: normal; }"
+                },
+                "bold": {
+                    "description": "Sets the font weight to bold.",
+                    "example": "p { font-weight: bold; }"
+                },
+                "100": {
+                    "description": "Sets the font weight to 100.",
+                    "example": "p { font-weight: 100; }"
+                }
+            }
+        },
+        "font-style": {
+            "description": "Specifies the style of the font.",
+            "values": {
+                "normal": {
+                    "description": "The font is rendered normally.",
+                    "example": "p { font-style: normal; }"
+                },
+                "italic": {
+                    "description": "The font is rendered in italics.",
+                    "example": "p { font-style: italic; }"
+                },
+                "oblique": {
+                    "description": "The font is rendered with an oblique style.",
+                    "example": "p { font-style: oblique; }"
+                }
+            }
+        },
+        "text-align": {
+            "description": "Specifies the horizontal alignment of text.",
+            "values": {
+                "left": {
+                    "description": "Aligns the text to the left.",
+                    "example": "p { text-align: left; }"
+                },
+                "center": {
+                    "description": "Centers the text.",
+                    "example": "p { text-align: center; }"
+                },
+                "right": {
+                    "description": "Aligns the text to the right.",
+                    "example": "p { text-align: right; }"
+                },
+                "justify": {
+                    "description": "Justifies the text.",
+                    "example": "p { text-align: justify; }"
+                }
+            }
+        },
+        "line-height": {
+            "description": "Specifies the line height of text.",
+            "values": {
+                "normal": {
+                    "description": "The default line height.",
+                    "example": "p { line-height: normal; }"
+                },
+                "1.5": {
+                    "description": "Sets the line height to 1.5 times the font size.",
+                    "example": "p { line-height: 1.5; }"
+                },
+                "20px": {
+                    "description": "Sets the line height to 20 pixels.",
+                    "example": "p { line-height: 20px; }"
+                }
+            }
+        },
+        "text-transform": {
+            "description": "Specifies the text transformation.",
+            "values": {
+                "uppercase": {
+                    "description": "Transforms text to uppercase.",
+                    "example": "p { text-transform: uppercase; }"
+                },
+                "lowercase": {
+                    "description": "Transforms text to lowercase.",
+                    "example": "p { text-transform: lowercase; }"
+                },
+                "capitalize": {
+                    "description": "Capitalizes the first letter of each word.",
+                    "example": "p { text-transform: capitalize; }"
+                },
+                "none": {
+                    "description": "No transformation is applied.",
+                    "example": "p { text-transform: none; }"
+                }
+            }
+        },
+        "letter-spacing": {
+            "description": "Specifies the space between letters.",
+            "values": {
+                "normal": {
+                    "description": "The default letter spacing.",
+                    "example": "p { letter-spacing: normal; }"
+                },
+                "2px": {
+                    "description": "Sets the letter spacing to 2 pixels.",
+                    "example": "p { letter-spacing: 2px; }"
+                },
+                "0.1em": {
+                    "description": "Sets the letter spacing to 0.1 em.",
+                    "example": "p { letter-spacing: 0.1em; }"
+                }
+            }
+        },
+        "text-indent": {
+            "description": "Specifies the indentation of the first line of text.",
+            "values": {
+                "0": {
+                    "description": "No indentation.",
+                    "example": "p { text-indent: 0; }"
+                },
+                "20px": {
+                    "description": "Indents the first line by 20 pixels.",
+                    "example": "p { text-indent: 20px; }"
+                },
+                "2em": {
+                    "description": "Indents the first line by 2 em.",
+                    "example": "p { text-indent: 2em; }"
+                }
+            }
+        }
+    },
+    "Backgrounds": {
+        "background": {
+            "description": "A shorthand property for background-color, background-image, background-repeat, background-position, and background-size.",
+            "values": {
+                "red": {
+                    "description": "Sets the background color to red.",
+                    "example": "div { background: red; }"
+                },
+                "url('image.jpg') no-repeat center center / cover": {
+                    "description": "Sets the background image to 'image.jpg', with no repeat, centered, and covering the entire container.",
+                    "example": "div { background: url('image.jpg') no-repeat center center / cover; }"
+                }
+            }
+        },
+        "background-color": {
+            "description": "Specifies the background color of an element.",
+            "values": {
+                "red": {
+                    "description": "Sets the background color to red.",
+                    "example": "div { background-color: red; }"
+                },
+                "rgba(0, 0, 0, 0.5)": {
+                    "description": "Sets the background color to a semi-transparent black.",
+                    "example": "div { background-color: rgba(0, 0, 0, 0.5); }"
+                }
+            }
+        },
+        "background-image": {
+            "description": "Specifies one or more background images for an element.",
+            "values": {
+                "url('image.jpg')": {
+                    "description": "Sets the background image to 'image.jpg'.",
+                    "example": "div { background-image: url('image.jpg'); }"
+                },
+                "linear-gradient(to right, red, blue)": {
+                    "description": "Sets the background image to a linear gradient from red to blue.",
+                    "example": "div { background-image: linear-gradient(to right, red, blue); }"
+                }
+            }
+        },
+        "background-repeat": {
+            "description": "Specifies whether a background image should repeat or not.",
+            "values": {
+                "repeat": {
+                    "description": "The background image repeats both horizontally and vertically.",
+                    "example": "div { background-repeat: repeat; }"
+                },
+                "no-repeat": {
+                    "description": "The background image does not repeat.",
+                    "example": "div { background-repeat: no-repeat; }"
+                },
+                "repeat-x": {
+                    "description": "The background image repeats only horizontally.",
+                    "example": "div { background-repeat: repeat-x; }"
+                },
+                "repeat-y": {
+                    "description": "The background image repeats only vertically.",
+                    "example": "div { background-repeat: repeat-y; }"
+                }
+            }
+        },
+        "background-position": {
+            "description": "Specifies the position of a background image.",
+           
+
+ "values": {
+                "center": {
+                    "description": "Centers the background image.",
+                    "example": "div { background-position: center; }"
+                },
+                "top left": {
+                    "description": "Positions the background image at the top-left corner.",
+                    "example": "div { background-position: top left; }"
+                },
+                "bottom right": {
+                    "description": "Positions the background image at the bottom-right corner.",
+                    "example": "div { background-position: bottom right; }"
+                }
+            }
+        },
+        "background-size": {
+            "description": "Specifies the size of a background image.",
+            "values": {
+                "cover": {
+                    "description": "Scales the background image to cover the entire container.",
+                    "example": "div { background-size: cover; }"
+                },
+                "contain": {
+                    "description": "Scales the background image to be contained within the container.",
+                    "example": "div { background-size: contain; }"
+                },
+                "100px 200px": {
+                    "description": "Sets the background image size to 100 pixels by 200 pixels.",
+                    "example": "div { background-size: 100px 200px; }"
+                }
+            }
+        }
+    },
+    "Animation and Transition": {
+        "transition": {
+            "description": "Shorthand property for transition-property, transition-duration, transition-timing-function, and transition-delay.",
+            "values": {
+                "all 0.3s ease-in-out": {
+                    "description": "Transitions all properties over 0.3 seconds with ease-in-out timing.",
+                    "example": "div { transition: all 0.3s ease-in-out; }"
+                },
+                "background-color 1s linear": {
+                    "description": "Transitions only the background-color property over 1 second with linear timing.",
+                    "example": "div { transition: background-color 1s linear; }"
+                }
+            }
+        },
+        "animation": {
+            "description": "Shorthand property for animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, and animation-fill-mode.",
+            "values": {
+                "slide 2s ease-in-out infinite": {
+                    "description": "Runs the 'slide' animation for 2 seconds with ease-in-out timing and infinite iterations.",
+                    "example": "div { animation: slide 2s ease-in-out infinite; }"
+                },
+                "bounce 1s linear": {
+                    "description": "Runs the 'bounce' animation for 1 second with linear timing.",
+                    "example": "div { animation: bounce 1s linear; }"
+                }
+            }
+        },
+        "animation-name": {
+            "description": "Specifies the name of the keyframe animation.",
+            "values": {
+                "slide": {
+                    "description": "The name of the keyframe animation.",
+                    "example": "div { animation-name: slide; }"
+                },
+                "fade": {
+                    "description": "The name of the keyframe animation.",
+                    "example": "div { animation-name: fade; }"
+                }
+            }
+        },
+        "animation-duration": {
+            "description": "Specifies the duration of the animation.",
+            "values": {
+                "2s": {
+                    "description": "The animation runs for 2 seconds.",
+                    "example": "div { animation-duration: 2s; }"
+                },
+                "500ms": {
+                    "description": "The animation runs for 500 milliseconds.",
+                    "example": "div { animation-duration: 500ms; }"
+                }
+            }
+        },
+        "animation-timing-function": {
+            "description": "Specifies the speed curve of the animation.",
+            "values": {
+                "ease": {
+                    "description": "The animation starts slow, then speeds up, and ends slowly.",
+                    "example": "div { animation-timing-function: ease; }"
+                },
+                "linear": {
+                    "description": "The animation has a constant speed.",
+                    "example": "div { animation-timing-function: linear; }"
+                },
+                "ease-in": {
+                    "description": "The animation starts slowly and speeds up.",
+                    "example": "div { animation-timing-function: ease-in; }"
+                },
+                "ease-out": {
+                    "description": "The animation starts quickly and slows down.",
+                    "example": "div { animation-timing-function: ease-out; }"
+                },
+                "ease-in-out": {
+
+
+                    "description": "The animation starts and ends slowly, with a faster middle.",
+                    "example": "div { animation-timing-function: ease-in-out; }"
+                }
+            }
+        },
+        "animation-delay": {
+            "description": "Specifies the delay before the animation starts.",
+            "values": {
+                "0s": {
+                    "description": "The animation starts immediately.",
+                    "example": "div { animation-delay: 0s; }"
+                },
+                "1s": {
+                    "description": "The animation starts after a 1 second delay.",
+                    "example": "div { animation-delay: 1s; }"
+                }
+            }
+        },
+        "animation-iteration-count": {
+            "description": "Specifies the number of times the animation should repeat.",
+            "values": {
+                "1": {
+                    "description": "The animation plays once.",
+                    "example": "div { animation-iteration-count: 1; }"
+                },
+                "infinite": {
+                    "description": "The animation repeats indefinitely.",
+                    "example": "div { animation-iteration-count: infinite; }"
+                }
+            }
+        },
+        "animation-direction": {
+            "description": "Specifies the direction of the animation.",
+            "values": {
+                "normal": {
+                    "description": "The animation plays forward.",
+                    "example": "div { animation-direction: normal; }"
+                },
+                "reverse": {
+                    "description": "The animation plays backward.",
+                    "example": "div { animation-direction: reverse; }"
+                },
+                "alternate": {
+                    "description": "The animation alternates between forward and backward.",
+                    "example": "div { animation-direction: alternate; }"
+                },
+                "alternate-reverse": {
+                    "description": "The animation alternates between backward and forward.",
+                    "example": "div { animation-direction: alternate-reverse; }"
+                }
+            }
+        },
+        "animation-fill-mode": {
+            "description": "Specifies how a CSS animation should apply styles to its target before and after it is executing.",
+            "values": {
+                "none": {
+                    "description": "No styles are applied outside the animation's keyframes.",
+                    "example": "div { animation-fill-mode: none; }"
+                },
+                "forwards": {
+                    "description": "The styles from the last keyframe are applied after the animation ends.",
+                    "example": "div { animation-fill-mode: forwards; }"
+                },
+                "backwards": {
+                    "description": "The styles from the first keyframe are applied before the animation starts.",
+                    "example": "div { animation-fill-mode: backwards; }"
+                },
+                "both": {
+                    "description": "The styles from both the first and last keyframes are applied.",
+                    "example": "div { animation-fill-mode: both; }"
+                }
+            }
+        }
+    }
+}

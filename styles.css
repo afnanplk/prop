@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#categories, #properties {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+button {
+    background: #000000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d242b;
+    border-radius: 4px;
+}
+
+#output-container {
+    padding: 20px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    border-radius: 4px;
+}
+
+.ppt button{
+    background: #000000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.ppt button:hover {
+    background: #141b21;
+}
+.cool{
+    background-color: #000000;
+    border-radius: 7px;
+    color: antiquewhite;
+
+}
+.plk{
+    background-color: #000000 !important;
+    color: #ffffff;
+    border-style: none !important;
+}
+
+
+
+header {
+    padding: 10px;
+    background: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+}
+
+h1 {
+    margin: 0;
+}
+
+#searchBar {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+#categoryList {
+    margin: 20px;
+}
+
+#detailsContainer {
+    margin: 20px;
+}
+
+#outputContainer {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    min-height: 100px;
+}
+
+#searchResults {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+}
+
+.search-result-item {
+    cursor: pointer;
+    margin: 5px 0;
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+.search-result-item:hover {
+    background: #e0e0e0;
+}
